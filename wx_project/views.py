@@ -106,4 +106,5 @@ def index(request):
         'Negative_oxygen_ion_data':datavalue[9],
         'Negative_oxygen_ion_unit':unitvalue[9],
     }
+    # print(data)
     return JsonResponse(data)

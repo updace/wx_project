@@ -21,10 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-cyn(7jx-6rsv4!o&!n4lzyw%6bbue6$%58in6byytv!@nn+)%^'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# 调试模式，开发阶段为True，项目部署上线就要改为False，否则会泄露项目相关信息。
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# 域名访问权限。设置可访问的域名，当DEBUG = True，ALLOWED_HOSTS = []空列表时，项目只允许localhost在浏览器访问。
+# 当DEBUG = False，ALLOWED_HOSTS = 必填，否则程序无法启动。如果要所有域名都可以访问可设为
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
